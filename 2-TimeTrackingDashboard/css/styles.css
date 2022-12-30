@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+/* Colo Primary */
+
+--blue: hsl(246, 80%, 60%);
+--light-red: hsl(15, 100%, 70%);/* (work)*/
+--soft-blue: hsl(195, 74%, 62%);/*(play)*/
+--right-red: hsl(348, 100%, 68%);/*(study)*/
+--lime-green: hsl(145, 58%, 55%);/*(exercise)*/
+--violet: hsl(264, 64%, 52%);/*(social)*/
+--soft-orange: hsl(43, 84%, 65%);/*(self care)*/
+
+/* Neutral */
+
+--very-dark-blue: hsl(226, 43%, 10%);
+--dark-blue: hsl(235, 46%, 20%);
+--desaturated-blue: hsl(235, 45%, 61%);
+--pale-blue: hsl(236, 100%, 87%);
+
+--font1:'Rubik', sans-serif;;
+}
+
+body{
+    /* font-family: sans-serif; */
+    font-family: var(--font1);
+    background-color: var(--very-dark-blue);
+    color: #fff;
+    /* height: 100vh; */
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: 200px;
+    grid-auto-rows: 180px;
+    gap: 1rem;
+    margin: 80px auto;
+    /* margin-top: 80px; */
+    width: 90%;
+    /* max-width: ; */
+}
+
+.card__main{
+    background-color: var(--dark-blue);
+    
+    border-radius: 20px;
+}
+
+.card__header{
+    padding: 30px 10px;
+    border-radius: 20px;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+.card__img{
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card__description{
+    color: var(--pale-blue);
+}
+
+.card__name{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.nav__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.nav__link{
+    color: var(--desaturated-blue);
+}
+
+.nav__link--cta{
+    color: #fff;
+}
+
+
+/* CARDS FATCS */
+.card__fact{
+    position: relative;
+    border-radius: 20px;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    /* background-position-y: -15px; */
+}
+
+.card__fact-1{
+    background-color: var(--light-red);
+    background-image: url('../images/icon-work.svg');
+  
+}
+
+.card__title{
+    font-weight: 400;
+}
+
+.card__details{
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    
+}
+
+
+.card__hours{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.card__more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__time{
+    text-align: right;
+    /* line-height: 2; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__week{
+    color: var(--pale-blue);
+}
+
+/* SEGUNDA CARD */
+.card__fact-2{
+    background-color:var(--soft-blue) ;
+    background-image: url('../images/icon-play.svg');
+}
+
+/* TERCERA CARD */
+.card__fact-3{
+    background-color:var(--right-red) ;
+    background-image: url('../images/icon-study.svg');
+}
+
+/* CUARTA CARD */
+
+.card__fact-4{
+    background-color:var(--lime-green) ;
+    background-image: url('../images/icon-exercise.svg');
+}
+
+/* QUINTA */
+
+.card__fact-5{
+    background-color:var(--violet) ;
+    background-image: url('../images/icon-social.svg');
+}
+
+/* SEXTA */
+
+.card__fact-6{
+    background-color:var(--soft-orange) ;
+    background-image: url('../images/icon-self-care.svg');
+}
+
+/*  ESTILOS PARA DESKTOP */
+
+@media (min-width:850px){
+
+    .card{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,200px);
+        margin: 80px auto;
+        max-width: 1440px;
+
+        grid-template-areas: 
+        "card_main card1 card2 card3"
+        "card_main card4 card5 card6"
+        ;
+    }
+    
+    .card__main{
+        grid-area: card_main;
+    }
+    
+    .card__header{
+        padding: 40px 25px;
+        border-radius: 20px;
+        height: 250px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    /* .card__img{
+        width: 80px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+     */
+
+    .nav__links{
+        height: 150px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:20px;
+    }
+    
+/* segunda parte */
+.card__fact{
+    position: relative;
+    border-radius: 20px;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    /* background-position-y: -15px; */
+}
+
+.card__fact-1{
+    background-color: var(--light-red);
+    background-image: url('../images/icon-work.svg');
+  
+}
+
+.card__title{
+    font-weight: 400;
+}
+
+.card__details{
+    background-color: var(--dark-blue);
+    height: 170px;
+ justify-content: space-around;
+}
+
+
+
+.card__time{
+ flex-direction: column;
+    align-items: flex-start;
+}
+
+}

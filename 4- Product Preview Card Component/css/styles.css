@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font1:'Fraunces', serif; /*700*/
+    --font2:'Montserrat', sans-serif; /*500, 700*/
+
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* - Font size (paragraph): 14px */
+}
+
+body{
+    /* height: 100vh; */
+    background-color: var(--dream);
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--white);
+    width: 90%;
+    max-width: 370px;
+    /* height: 90%; */
+    margin: 15px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__img{
+    background-image: url('../images/image-product-mobile.jpg');
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+}
+
+.card__type{
+    font-family: var(--font2);
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.card__texts{
+    padding: 25px;
+}
+
+.card__title{
+    font-family: var(--font1);
+    display: flex;
+    flex-direction: column;
+    /* font-size: 2rem; */
+    line-height: 1;
+    color: var(--very-dark-blue);
+    padding: 15px 0;
+}
+
+.card__paragraph{
+    color: var(--dark-grayish-blue);
+    font-family:var(--font2);
+    font-size: 14px;
+}
+
+.card__prices{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    padding: 10px 0;
+
+}
+
+.card__price{
+    font-size: 30px;
+    font-family: var(--font1);
+    color: var(--dark-cyan);
+}
+
+.card__price2{
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.card__cta{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--font2);
+    background-color: var(--dark-cyan);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+@media (max-width:370px){
+    .card__title{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:850px){
+    .card{
+        max-width: 650px;
+        min-height: 500px;
+        margin: 50px auto;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    .card__type{
+        font-size: 14px;
+    }
+
+    .card__title{
+        padding: 20px 20px 0 0;
+        font-size: 35px;
+    }
+
+    .card__img{
+        background-image: url('../images/image-product-desktop.jpg');
+        background-position: cover;
+        height: 100%;
+    }
+
+    .card__texts{
+        padding: 30px;
+    }
+
+    .card__paragraph{
+        font-size: 16px;
+        padding: 30px 0 0;
+        line-height: 1.5;
+    }
+
+    .card__prices{
+        padding: 20px 0;
+    
+    }
+
+    .card__cta{
+        margin-top:20px;
+    }
+}
